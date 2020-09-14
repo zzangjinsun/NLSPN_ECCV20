@@ -77,7 +77,7 @@ Please follow the [official instructions](https://github.com/charlesshang/DCNv2)
 
 We used two datasets for training and evaluation.
 
-##### NYU Depth V2 (NYUv2)
+#### NYU Depth V2 (NYUv2)
 
 We used preprocessed NYUv2 HDF5 dataset provided by [Fangchang Ma](https://github.com/fangchangma/sparse-to-dense).
 
@@ -117,7 +117,7 @@ $ python generate_json_NYUDepthV2.py --path_root PATH_TO_NYUv2
 Note that data lists for NYUv2 are borrowed from the [CSPN repository](https://github.com/XinJCheng/CSPN/tree/master/cspn_pytorch/datalist).
 
 
-##### KITTI Depth Completion (KITTI DC)
+#### KITTI Depth Completion (KITTI DC)
 
 KITTI DC dataset is available at the [KITTI DC Website](http://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_completion).
 
