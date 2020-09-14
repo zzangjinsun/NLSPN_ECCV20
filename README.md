@@ -189,7 +189,7 @@ $ python main.py --dir_data PATH_TO_NYUv2 --data_name NYU  --split_json ../data_
     --patch_height 228 --patch_width 304 --gpus 0,1,2,3 --loss 1.0*L1+1.0*L2 --epochs 20 \
     --batch_size 12 --max_depth 10.0 --num_sample 500 --save NAME_TO_SAVE
 
-$ An example command for KITTI DC dataset training
+# An example command for KITTI DC dataset training
 $ python main.py --dir_data PATH_TO_KITTI_DC --data_name KITTIDC --split_json ../data_json/kitti_dc.json \
     --patch_height 240 --patch_width 1216 --gpus 0,1,2,3 --loss 1.0*L1+1.0*L2 --epochs 20 \
     --batch_size 12 --max_depth 90.0 --num_sample 0 --top_crop 100 --test_crop --save NAME_TO_SAVE
@@ -217,7 +217,7 @@ $ python main.py --dir_data PATH_TO_NYUv2 --data_name NYU  --split_json ../data_
     --patch_height 228 --patch_width 304 --gpus 0,1,2,3 --max_depth 10.0 --num_sample 500 \
     --test_only --pretrain PATH_TO_WEIGHTS --save NAME_TO_SAVE
 
-$ An example command for KITTI DC dataset testing
+# An example command for KITTI DC dataset testing
 $ python main.py --dir_data PATH_TO_KITTI_DC --data_name KITTIDC --split_json ../data_json/kitti_dc.json \
     --patch_height 240 --patch_width 1216 --gpus 0,1,2,3 --max_depth 90.0 --num_sample 0 \
     --test_only --pretrain PATH_TO_WEIGHTS --save NAME_TO_SAVE
