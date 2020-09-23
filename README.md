@@ -67,7 +67,7 @@ $ pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--c
 
 #### Deformable Convolution V2 (DCNv2)
 
-Please follow the [official instructions](https://github.com/charlesshang/DCNv2) to install DCNv2 module.
+Please refer to the [PyTorch DCNv2 (ported from MXNet)](https://github.com/xvjiarui/Deformable-Convolution-V2-PyTorch) to install DCNv2 module.
 
 
 ### Usage
@@ -110,7 +110,7 @@ Note that the original full NYUv2 dataset is available at the [official website]
 After preparing the dataset, you should generate a json file containing paths to individual images.
 
 ```bash
-$ cd utils
+$ cd NLSPN_ROOT/utils
 $ python generate_json_NYUDepthV2.py --path_root PATH_TO_NYUv2
 ```
 
@@ -128,7 +128,7 @@ Please follow the official instructions (cf., devkit/readme.txt in each dataset)
 After downloading datasets, you should first copy color images, poses, and calibrations from the KITTI Raw to the KITTI DC dataset.
 
 ```bash
-$ cd utils
+$ cd NLSPN_ROOT/utils
 $ python prepare_KITTI_DC.py --path_root_dc PATH_TO_KITTI_DC --path_root_raw PATH_TO_KITTI_RAW
 ```
 
@@ -169,7 +169,7 @@ After that, you will get a data structure as follows:
 After preparing the dataset, you should generate a json file containing paths to individual images.
 
 ```bash
-$ cd utils
+$ cd NLSPN_ROOT/utils
 
 # For Train / Validation
 $ python generate_json_KITTI_DC.py --path_root PATH_TO_KITTI_DC
