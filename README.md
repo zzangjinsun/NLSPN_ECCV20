@@ -46,7 +46,7 @@ Our released implementation is tested on:
 - Tensorboard 2.3
 - NVIDIA CUDA 10.2
 - NVIDIA Apex
-- [Deformable Convolution V2](https://github.com/charlesshang/DCNv2)
+- [Deformable Convolution V2](https://arxiv.org/abs/1811.11168)
 - 4x NVIDIA GTX 1080 TI / 4x NVIDIA Titan RTX GPUs
 
 
