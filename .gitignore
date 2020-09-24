@@ -1,4 +1,2 @@
 __pycache__/
 *.pyc
-
-src/model/deformconv

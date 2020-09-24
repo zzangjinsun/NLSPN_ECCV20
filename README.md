@@ -67,7 +67,16 @@ $ pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--c
 
 #### Deformable Convolution V2 (DCNv2)
 
-Please refer to the [PyTorch DCNv2 (ported from MXNet)](https://github.com/xvjiarui/Deformable-Convolution-V2-PyTorch) to install DCNv2 module.
+Build and install DCN module.
+
+```bash
+cd NLSPN_ROOT/src/model/deformconv
+sh make.sh
+```
+
+The DCN module in this repository is from [here](https://github.com/xvjiarui/Deformable-Convolution-V2-PyTorch) but some function names are slightly different.
+
+Please refer to the [PyTorch DCN](https://github.com/chengdazhi/Deformable-Convolution-V2-PyTorch) for the original implementation.
 
 
 ### Usage
