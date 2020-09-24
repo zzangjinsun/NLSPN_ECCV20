@@ -70,8 +70,8 @@ $ pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--c
 Build and install DCN module.
 
 ```bash
-cd NLSPN_ROOT/src/model/deformconv
-sh make.sh
+$ cd NLSPN_ROOT/src/model/deformconv
+$ sh make.sh
 ```
 
 The DCN module in this repository is from [here](https://github.com/xvjiarui/Deformable-Convolution-V2-PyTorch) but some function names are slightly different.
