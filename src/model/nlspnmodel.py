@@ -191,12 +191,14 @@ class NLSPN(nn.Module):
         list_feat = []
 
         for k in range(1, self.prop_time + 1):
+            # Input preservation for each iteration
+            if self.args.preserve_input:
+                feat_result = (1.0 - mask_fix) * feat_result \
+                              + mask_fix * feat_fix
+
             feat_result = self._propagate_once(feat_result, offset, aff)
 
             list_feat.append(feat_result)
-
-        if self.args.preserve_input:
-            feat_result = (1.0 - mask_fix) * feat_result + mask_fix * feat_fix
 
         return feat_result, list_feat, offset, aff, self.aff_scale_const.data
 
