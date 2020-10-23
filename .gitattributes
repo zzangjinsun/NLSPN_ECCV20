@@ -1,2 +1,0 @@
-results/NLSPN_NYU.pt filter=lfs diff=lfs merge=lfs -text
-results/NLSPN_KITTI_DC.pt filter=lfs diff=lfs merge=lfs -text
