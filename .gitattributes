@@ -1,4 +1,1 @@
-results/NLSPN_NYU_results.zip filter=lfs diff=lfs merge=lfs -text
 results/NLSPN_NYU.pt filter=lfs diff=lfs merge=lfs -text
-results/NLSPN_KITTI_DC_results.zip filter=lfs diff=lfs merge=lfs -text
-results/NLSPN_KITTI_DC.pt filter=lfs diff=lfs merge=lfs -text
