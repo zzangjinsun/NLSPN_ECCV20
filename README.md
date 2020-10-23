@@ -282,7 +282,7 @@ $ python main.py --dir_data PATH_TO_KITTI_DC --data_name KITTIDC --split_json ..
 
 Note that result images can be saved with *--save_image --save_result_only* flags.
 
-We also release our prediction results on two datasets (Refer to the [NYU](results/NLSPN_NYU_results.zip) and [KITTI DC Online Submission](results/NLSPN_KITTI_DC_results.zip) files).
+We also release our prediction results on two datasets (Refer to the [NYU](results/NLSPN_NYU_results.zip) and [KITTI DC Online Submission](https://drive.google.com/file/d/1M3SfzCD96rHgaJYqV0sTagZJus_VzRra/view?usp=sharing) files).
 
 They are saved in the KITTI submission format.
 
