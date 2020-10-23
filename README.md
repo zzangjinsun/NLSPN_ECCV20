@@ -247,7 +247,9 @@ Images for submission can be found in experiments/NAME_TO_SAVE/test/epoch%04d.
 
 #### Pre-trained Models and Results
 
-We release our pre-trained models on the [NYU](results/NLSPN_NYU.pt) and [KITTI DC](results/NLSPN_KITTI_DC.pt) datasets.
+We release our pre-trained models on the [NYU](https://drive.google.com/file/d/1LTdZI36zdOeVmKRbG3orzvwXctg-OjGC/view?usp=sharing) and [KITTI DC](https://drive.google.com/file/d/11by_1oglcncSHFeF3S2ldcysQYjyDcQh/view?usp=sharing) datasets.
+
+Download pre-trained models and put them in the _NLSPN_ROOT/results_ directory.
 
 __For the KITTI DC dataset, results with the released model are slightly better than those reported in the paper.__
 
