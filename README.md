@@ -245,6 +245,51 @@ Images for submission can be found in experiments/NAME_TO_SAVE/test/epoch%04d.
 
 
 
+#### Pre-trained Models and Results
+
+We release our pre-trained models on the [NYU](results/NLSPN_NYU.pt) and [KITTI DC](results/NLSPN_KITTI_DC.pt) datasets.
+
+__For the KITTI DC dataset, results with the released model are slightly better than those reported in the paper.__
+
+| Type | RMSE (mm) | MAE | iRMSE | iMAE |
+|:----:|:---------:|:---:|:-----:|:----:|
+| Online Test Set (Paper) | 741.68 | 199.59 | 1.99 | __0.84__ |
+| Online Test Set (Released) | __740.66__ | __198.70__ | __1.96__ | __0.84__ |
+| Validation Set (Released) | 771.8 | 197.3 | 2.0 | 0.8
+
+For the NYU dataset, results are the same.
+
+To get quantitative results reported in the paper:
+
+```bash
+$ cd NLSPN_ROOT/src
+
+# An example command for NYUv2 dataset testing
+$ python main.py --dir_data PATH_TO_NYUv2 --data_name NYU  --split_json ../data_json/nyu.json \
+    --patch_height 228 --patch_width 304 --gpus 0,1,2,3 --max_depth 10.0 --num_sample 500 \
+    --test_only --pretrain ../results/NLSPN_NYU.pt --preserve_input --save NAME_TO_SAVE
+
+# An example command for KITTI DC dataset testing
+$ python main.py --dir_data PATH_TO_KITTI_DC --data_name KITTIDC --split_json ../data_json/kitti_dc.json \
+    --patch_height 240 --patch_width 1216 --gpus 0,1,2,3 --max_depth 90.0 --num_sample 0 \
+    --test_only --pretrain ../results/NLSPN_KITTI_DC.pt --preserve_input --save NAME_TO_SAVE
+
+# An example command for KITTI DC Online evaluation data generation
+$ python main.py --dir_data PATH_TO_KITTI_DC --data_name KITTIDC --split_json ../data_json/kitti_dc_test.json \
+    --patch_height 240 --patch_width 1216 --gpus 0,1,2,3 --max_depth 90.0 --num_sample 0 \
+    --test_only --pretrain ../results/NLSPN_KITTI_DC.pt --preserve_input --save_image --save_result_only --save NAME_TO_SAVE
+```
+
+Note that result images can be saved with *--save_image --save_result_only* flags.
+
+We also release our prediction results on two datasets (Refer to the [NYU](results/NLSPN_NYU_results.zip) and [KITTI DC Online Submission](results/NLSPN_KITTI_DC_results.zip) files).
+
+They are saved in the KITTI submission format.
+
+To get real depth values, use the following conversion: __depth = double(image) / 256.0__
+
+
+
 ### Notes
 
 - Our original implementation was based on old libraries (e.g., PyTorch 1.2 / torchvision 0.4 / Python 3.6). We cleaned and updated our implementation for this release.
