@@ -126,10 +126,14 @@ class NLSPN(nn.Module):
                     continue
 
                 offset_tmp = offset_each[idx_off].detach()
-                offset_tmp[:, 0, :, :] = \
-                    offset_tmp[:, 0, :, :] + hh - (self.k_f - 1) / 2
-                offset_tmp[:, 1, :, :] = \
-                    offset_tmp[:, 1, :, :] + ww - (self.k_f - 1) / 2
+
+                # NOTE : Use --legacy option ONLY for the pre-trained models
+                # for ECCV20 results.
+                if self.args.legacy:
+                    offset_tmp[:, 0, :, :] = \
+                        offset_tmp[:, 0, :, :] + hh - (self.k_f - 1) / 2
+                    offset_tmp[:, 1, :, :] = \
+                        offset_tmp[:, 1, :, :] + ww - (self.k_f - 1) / 2
 
                 conf_tmp = ModulatedDeformConvFunction.apply(
                     confidence, offset_tmp, modulation_dummy, self.w_conf,

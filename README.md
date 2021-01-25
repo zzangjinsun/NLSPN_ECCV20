@@ -6,6 +6,14 @@ Non-Local Spatial Propagation Network for Depth Completion
 #### _European Conference on Computer Vision (ECCV), Aug 2020_
 
 
+### News
+
+* Jan. 2021 : Confidence issue fixed. Please refer to [#16](#16) for the details.
+
+* Dec. 2020 : [Winner, Qualcomm Innovation Fellowship Korea (QIFK) 2020](https://www.qualcomm.com/invention/research/university-relations/innovation-fellowship/winners)
+
+* Oct. 2020 : Pretrained models are released. Please refer to [here](#pre-trained-models-and-results).
+
 ### Introduction
 
 ![Teaser](./images/NLSPN_teaser.png)
@@ -269,18 +277,21 @@ $ cd NLSPN_ROOT/src
 # An example command for NYUv2 dataset testing
 $ python main.py --dir_data PATH_TO_NYUv2 --data_name NYU  --split_json ../data_json/nyu.json \
     --patch_height 228 --patch_width 304 --gpus 0,1,2,3 --max_depth 10.0 --num_sample 500 \
-    --test_only --pretrain ../results/NLSPN_NYU.pt --preserve_input --save NAME_TO_SAVE
+    --test_only --pretrain ../results/NLSPN_NYU.pt --preserve_input --save NAME_TO_SAVE --legacy
 
 # An example command for KITTI DC dataset testing
 $ python main.py --dir_data PATH_TO_KITTI_DC --data_name KITTIDC --split_json ../data_json/kitti_dc.json \
     --patch_height 240 --patch_width 1216 --gpus 0,1,2,3 --max_depth 90.0 --num_sample 0 \
-    --test_only --pretrain ../results/NLSPN_KITTI_DC.pt --preserve_input --save NAME_TO_SAVE
+    --test_only --pretrain ../results/NLSPN_KITTI_DC.pt --preserve_input --save NAME_TO_SAVE --legacy
 
 # An example command for KITTI DC Online evaluation data generation
 $ python main.py --dir_data PATH_TO_KITTI_DC --data_name KITTIDC --split_json ../data_json/kitti_dc_test.json \
     --patch_height 240 --patch_width 1216 --gpus 0,1,2,3 --max_depth 90.0 --num_sample 0 \
-    --test_only --pretrain ../results/NLSPN_KITTI_DC.pt --preserve_input --save_image --save_result_only --save NAME_TO_SAVE
+    --test_only --pretrain ../results/NLSPN_KITTI_DC.pt --preserve_input --save_image --save_result_only \
+    --save NAME_TO_SAVE --legacy
 ```
+
+**Please do not forget to use *--legacy* flag to reproduce our results.**
 
 Note that result images can be saved with *--save_image --save_result_only* flags.
 
@@ -295,4 +306,4 @@ To get real depth values, use the following conversion: __depth = double(image) 
 ### Notes
 
 - Our original implementation was based on old libraries (e.g., PyTorch 1.2 / torchvision 0.4 / Python 3.6). We cleaned and updated our implementation for this release.
-- The original NYUv2 / KITTI DC results in the paper were obtained with a powerful machine equipped with 8 NVIDIA P40 GPUs. From my experiences, the larger batch you use, the better performance you get.
+- The original NYUv2 / KITTI DC results in the paper were obtained with a powerful machine equipped with 8 NVIDIA P40 GPUs. From my experiences, **the larger batch you use, the better performance you get**.
