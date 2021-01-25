@@ -291,7 +291,7 @@ $ python main.py --dir_data PATH_TO_KITTI_DC --data_name KITTIDC --split_json ..
     --save NAME_TO_SAVE --legacy
 ```
 
-Please do not forget to use *--legacy* flag to reproduce our results.
+**Please do not forget to use *--legacy* flag to reproduce our results.**
 
 Note that result images can be saved with *--save_image --save_result_only* flags.
 
