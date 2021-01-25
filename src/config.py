@@ -123,6 +123,10 @@ parser.add_argument('--no_conf',
                     action='store_false',
                     dest='conf_prop',
                     help='no confidence for propagation')
+parser.add_argument('--legacy',
+                    action='store_true',
+                    default=False,
+                    help='legacy code support for pre-trained models')
 
 
 # Training
