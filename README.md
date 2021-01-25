@@ -8,11 +8,11 @@ Non-Local Spatial Propagation Network for Depth Completion
 
 ### News
 
-* Jan. 2021 : Confidence issue fixed. Please refer to [#16](https://github.com/zzangjinsun/NLSPN_ECCV20/issues/16) for the details.
+* Jan. 2021 : Confidence issue fixed. Please refer to [#16](#16) for the details.
 
 * Dec. 2020 : [Winner, Qualcomm Innovation Fellowship Korea (QIFK) 2020](https://www.qualcomm.com/invention/research/university-relations/innovation-fellowship/winners)
 
-* Oct. 2020 : Pretrained models are released. Please refer to [here](https://github.com/zzangjinsun/NLSPN_ECCV20#pre-trained-models-and-results).
+* Oct. 2020 : Pretrained models are released. Please refer to [here](#pre-trained-models-and-results).
 
 ### Introduction
 
